@@ -367,6 +367,93 @@
             background-color: #ff66b3; box-shadow: 0 0 10px rgba(255, 102, 179, 0.8); border: 1px solid white;
         }
 
+        /* CSS ART FOR FRUITY N' SUS */
+        .art-fruity {
+            background-color: #0d0d0f; /* Space background */
+            width: 100%; height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .art-fruity .stars {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 50px 160px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 160px 120px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 200px 50px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 250px 150px, #fff, rgba(0,0,0,0));
+            opacity: 0.5;
+        }
+
+        /* ACTUAL FRUIT STYLES */
+        .art-fruity .apple-real {
+            position: absolute; left: 25%; top: 40%;
+            width: 45px; height: 42px; background-color: #e62323;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            box-shadow: inset -6px -6px 12px rgba(0,0,0,0.4); z-index: 5;
+        }
+        .art-fruity .apple-stem {
+            position: absolute; top: -12px; left: 20px;
+            width: 4px; height: 15px; background-color: #4a2f18; border-radius: 2px;
+        }
+        .art-fruity .apple-leaf {
+            position: absolute; top: -8px; left: 22px;
+            width: 14px; height: 9px; background-color: #3bb53b;
+            border-radius: 10px 0px 10px 0px; transform: rotate(-20deg);
+        }
+        .art-fruity .apple-face {
+            position: absolute; top: 15px; left: 25px; display: flex; gap: 5px;
+        }
+        .art-fruity .apple-face::before, .art-fruity .apple-face::after {
+            content: ''; width: 5px; height: 7px; background: #000; border-radius: 50%;
+            transform: rotate(15deg); /* Angry slant */
+        }
+        .art-fruity .apple-face::after { transform: rotate(-15deg); }
+        
+        .art-fruity .knife-real {
+            position: absolute; right: -28px; top: 20px;
+            width: 25px; height: 7px; background-color: #d1d1d1;
+            border-radius: 0 4px 4px 0; z-index: 4; transform: rotate(-15deg);
+        }
+        .art-fruity .knife-real::before {
+            content: ''; position: absolute; left: -10px; top: -2px;
+            width: 10px; height: 11px; background-color: #333; border-radius: 2px;
+        }
+        .art-fruity .knife-blood {
+            position: absolute; right: 0; top: 0;
+            width: 8px; height: 100%; background-color: #e62323; border-radius: 0 4px 4px 0;
+        }
+
+        /* Dead Banana Body */
+        .art-fruity .banana-real {
+            position: absolute; right: 25%; top: 52%;
+            width: 32px; height: 28px; background-color: #f7e01b;
+            border-radius: 4px 4px 15px 15px;
+            box-shadow: inset -5px -5px 10px rgba(0,0,0,0.2); z-index: 5;
+        }
+        .art-fruity .banana-peel {
+            position: absolute; bottom: 0; left: -12px;
+            width: 55px; height: 15px; background-color: #e3cc14;
+            border-radius: 50%; z-index: 4;
+        }
+        .art-fruity .banana-bone {
+            position: absolute; top: -14px; left: 10px;
+            width: 10px; height: 15px; background-color: #e8e8e8;
+            border-radius: 3px; z-index: 6;
+        }
+        .art-fruity .banana-bone::before, .art-fruity .banana-bone::after {
+            content: ''; position: absolute; top: -6px;
+            width: 9px; height: 9px; background-color: #e8e8e8; border-radius: 50%;
+        }
+        .art-fruity .banana-bone::before { left: -4px; }
+        .art-fruity .banana-bone::after { right: -4px; }
+
         /* CSS ART FOR COMING SOON */
         .art-coming-soon {
             width: 100%; height: 100%;
@@ -504,6 +591,34 @@
             <div class="card-content">
                 <h2 class="card-title">Beat Maker</h2>
                 <a href="https://gctdmaker.github.io/Beat-Maker/" target="_blank" class="btn">Launch App</a>
+            </div>
+        </div>
+
+        <!-- Fruity n' Sus -->
+        <div class="card">
+            <div class="img-wrapper">
+                <div class="art-fruity">
+                    <div class="stars"></div>
+                    
+                    <!-- Apple Impostor -->
+                    <div class="apple-real">
+                        <div class="apple-stem"></div>
+                        <div class="apple-leaf"></div>
+                        <div class="apple-face"></div>
+                        <div class="knife-real"><div class="knife-blood"></div></div>
+                    </div>
+
+                    <!-- Banana Victim (Half-eaten/Cut body) -->
+                    <div class="banana-real">
+                        <div class="banana-bone"></div>
+                        <div class="banana-peel"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Fruity n' Sus</h2>
+                <a href="https://gctdmaker.github.io/fruitynsus/" target="_blank" class="btn">Play Game</a>
             </div>
         </div>
 
